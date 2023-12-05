@@ -60,6 +60,5 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
-
-
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
 }
