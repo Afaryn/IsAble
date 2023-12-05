@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:id="@+id/bottomAppBar"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="10dp"
-        >
+        app:fabCradleVerticalOffset="10dp">
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,6 +25,8 @@
             android:layout_marginRight="16dp"
             android:background="@drawable/backgroud_color"
             android:paddingVertical="10dp"
+            app:itemIconSize="30dp"
+            app:itemPaddingBottom="5dp"
             app:menu="@menu/main_menu" />
 
 
@@ -32,14 +35,13 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
-        android:layout_height="76dp"
-
+        android:layout_height="wrap_content"
         android:clickable="true"
         android:contentDescription="@string/scan_nav"
         android:src="@drawable/scan_colored"
         app:backgroundTint="#083D77"
         app:fabCustomSize="@android:dimen/notification_large_icon_width"
-        app:layout_anchor="@id/bottomAppBar"
+        app:layout_anchor="@id/bottomNavigationView"
         app:maxImageSize="40dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

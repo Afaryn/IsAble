@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.isable_capstone.MainActivity
 import com.example.isable_capstone.R
+import com.example.isable_capstone.ui.authentication.sign_in.sign_in_activity
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 
@@ -36,7 +37,7 @@ class OnBoarding_Activity :AppCompatActivity() {
         val btnSignUp : Button = findViewById(R.id.btn_signup)
 
         btnSignIn.setOnClickListener{
-            val intent = Intent (this,MainActivity::class.java)
+            val intent = Intent (this,sign_in_activity::class.java)
             startActivity(intent)
         }
 

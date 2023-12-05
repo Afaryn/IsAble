@@ -13,11 +13,21 @@
         android:theme="@style/Base.Theme.IsAble_Capstone"
         tools:targetApi="31">
         <activity
+
             android:name=".register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
+       <activity
+            android:name=".ui.authentication.sign_up.sign_up_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authentication.sign_in.sign_in_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.onBoarding.OnBoarding_Activity"
             android:exported="true">
