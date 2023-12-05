@@ -59,5 +59,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
 
 }
