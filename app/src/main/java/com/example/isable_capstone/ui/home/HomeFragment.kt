@@ -57,6 +57,9 @@ class HomeFragment : Fragment() {
         val imageSlider = view.findViewById<ImageSlider>(R.id.banner_slide)
         imageSlider.setImageList(imageList)
 
+        val delayInMillis  = 2000L
+        imageSlider.startSliding(delayInMillis)
+
         //<---RecyclerView--->
         val lm = LinearLayoutManager(activity)
         lm.orientation=LinearLayoutManager.VERTICAL
