@@ -11,9 +11,9 @@ class OnBoardingPagerAdapter(fragmentManager: FragmentManager,lifecycle: Lifecyc
 
     override fun createFragment(position: Int): Fragment {
         return when (position){
-            0->OnBoarding_Fragment_1()
-            1->OnBoarding_Fragment_2()
-            2->OnBoarding_Fragment_3()
+            0->OnBoardingFragment1()
+            1->OnBoardingFragment2()
+            2->OnBoardingFragment3()
             else -> throw IllegalArgumentException("Invalid Position")
         }
     }

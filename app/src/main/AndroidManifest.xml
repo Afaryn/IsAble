@@ -26,7 +26,7 @@
             android:name=".ui.authentication.sign_in.sign_in_activity"
             android:exported="false" />
         <activity
-            android:name=".ui.onBoarding.OnBoarding_Activity"
+            android:name=".ui.onBoarding.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

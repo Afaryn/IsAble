@@ -7,15 +7,15 @@ import android.view.WindowInsets
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.example.isable_capstone.MainActivity
 import com.example.isable_capstone.R
 import com.example.isable_capstone.ui.authentication.sign_in.sign_in_activity
 import com.example.isable_capstone.ui.authentication.sign_up.sign_up_activity
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 
+
 @Suppress("DEPRECATION")
-class OnBoarding_Activity :AppCompatActivity() {
+class OnBoardingActivity :AppCompatActivity() {
 
     private lateinit var viewPager : ViewPager2
     private lateinit var pagerAdapter: OnBoardingPagerAdapter
