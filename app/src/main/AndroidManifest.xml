@@ -18,16 +18,13 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true"/>
        <activity
             android:name=".ui.authentication.sign_up.sign_up_activity"
             android:exported="false" />
         <activity
             android:name=".ui.authentication.sign_in.sign_in_activity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
         <activity
             android:name=".ui.onBoarding.OnBoarding_Activity"
             android:exported="true">

@@ -8,11 +8,15 @@ import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import com.example.isable_capstone.MainActivity
 import com.example.isable_capstone.R
+import com.example.isable_capstone.databinding.ActivitySignInBinding
 
 class sign_in_activity : AppCompatActivity() {
+
+private lateinit var binding: ActivitySignInBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        binding=ActivitySignInBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.xml_toolbar)
 
@@ -20,9 +24,11 @@ class sign_in_activity : AppCompatActivity() {
         supportActionBar?.title=getString(R.string.sign_in)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        findViewById<Button>(R.id.btn_sign_in).setOnClickListener{
+        binding.btnSignIn.setOnClickListener{
             startActivity(Intent(this@sign_in_activity, MainActivity::class.java))
         }
+
+
     }
 
     @Suppress("DEPRECATION")

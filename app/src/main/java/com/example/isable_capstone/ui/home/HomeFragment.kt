@@ -5,9 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.isable_capstone.R
+import com.example.isable_capstone.model.ArticleAdapter
+import com.example.isable_capstone.model.ArticleDataResource
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +28,10 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var binding : HomeFragment?=null
+    lateinit var rvArticle:RecyclerView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -37,6 +45,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        //<---Slider--->
         val imageList = ArrayList<SlideModel>()
 
         imageList.add(SlideModel(R.drawable.banner1))
@@ -46,6 +56,16 @@ class HomeFragment : Fragment() {
 
         val imageSlider = view.findViewById<ImageSlider>(R.id.banner_slide)
         imageSlider.setImageList(imageList)
+
+        //<---RecyclerView--->
+        val lm = LinearLayoutManager(activity)
+        lm.orientation=LinearLayoutManager.VERTICAL
+        rvArticle= view.findViewById(R.id.rv_artikel)
+
+        val adapeterArticle = ArticleAdapter(ArticleDataResource.dummyArticle,activity)
+        rvArticle.setHasFixedSize(true)
+        rvArticle.layoutManager=lm
+        rvArticle.adapter=adapeterArticle
 
         return view
     }

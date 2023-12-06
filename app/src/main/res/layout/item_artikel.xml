@@ -15,20 +15,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        
+
         <ImageView
+            android:id="@+id/iv_article"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/artikel1"
             android:scaleType="centerCrop"
-            />
+            android:src="@drawable/artikel1" />
+
         <TextView
+            android:id="@+id/tv_judul_article"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="artikel 1"
             android:layout_margin="15dp"
-            android:textColor="@color/black"
             android:fontFamily="@font/pregular"
+            android:text="artikel 1"
+            android:textColor="@color/black"
             android:textSize="15sp" />
     </LinearLayout>
 

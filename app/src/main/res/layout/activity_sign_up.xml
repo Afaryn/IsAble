@@ -11,42 +11,14 @@
         android:orientation="vertical"
         tools:context=".ui.authentication.sign_up.sign_up_activity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@color/white">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="4dp"
-                app:cardElevation="4dp">
-                <ImageButton
-                    android:id="@+id/btnBack"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@color/white"
-                    android:src="@drawable/arrow_back"
-                    android:contentDescription="Back"
-                    tools:ignore="VisualLintBounds" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:fontFamily="@font/pbold"
-                android:text="Sign up"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"/>
-        </androidx.appcompat.widget.Toolbar>
+        <include
+            android:id="@+id/xml_toolbar"
+            layout = "@layout/toolbar"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/photoProfile"
-            android:layout_width="103dp"
-            android:layout_height="103dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:scaleType="centerCrop"
