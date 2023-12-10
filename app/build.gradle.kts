@@ -2,6 +2,9 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    id("com.google.gms.google-services")
+
+
 }
 
 android {
@@ -62,4 +65,7 @@ dependencies {
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+
 }
