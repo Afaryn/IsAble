@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.isable_capstone.R
+import com.example.isable_capstone.ui.onBoarding.OnBoardingActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
@@ -32,7 +33,9 @@ class sign_up_activity : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email,pass)
                 .addOnCompleteListener(this) {
                     if (it.isSuccessful){
-                        Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Sign Up Berhasil", Toast.LENGTH_SHORT).show()
+                        val intent = Intent (this, OnBoardingActivity::class.java)
+                        startActivity(intent)
                     }else{
                         Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
                     }

@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar
 import com.example.isable_capstone.MainActivity
 import com.example.isable_capstone.R
 import com.example.isable_capstone.databinding.ActivitySignInBinding
+import com.example.isable_capstone.ui.authentication.sign_up.sign_up_activity
 import com.google.firebase.auth.FirebaseAuth
 
 class sign_in_activity : AppCompatActivity() {
@@ -42,7 +43,9 @@ class sign_in_activity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener {
                 if (it.isSuccessful){
-                    Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Sign In Berhasil", Toast.LENGTH_SHORT).show()
+                    val intent = Intent (this, MainActivity::class.java)
+                    startActivity(intent)
                 }else{
                     Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
